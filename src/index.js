@@ -8,7 +8,6 @@ import 'normalize.css';
 
 const app = (
     <Provider store={store}>
-        <h1 className="visually-hidden">Личный кабинет</h1>
         <App />
     </Provider>
 )

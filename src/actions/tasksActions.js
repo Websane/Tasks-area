@@ -22,7 +22,6 @@ const headers = () => {
         'Content-Type': 'application/json'
     }
 }
-
 //запрос дерева тегов с заданиями
 export const getTasks = () => async (dispatch) => {
     dispatch(tasksRequest());

@@ -33,6 +33,7 @@ export function Tree() {
         const exams = obj['exams'];
         return Object.values(exams);
     }
+    //получение массива по выбранному ключу
     const getArr = (arr, key, select) => {
         const obj = arr.find(item => item.title === select);
         if (select === selectExams) {
@@ -65,7 +66,7 @@ export function Tree() {
             setNumTaskArray(getArr(subjectsArray, 'nums', selectSubjects));
         }
     }, [subjectsArray, touchedSubjects])
-
+    //обрабатываем отправку формы
     const handleSubmit = (ev) => {
         ev.preventDefault();
 
@@ -114,21 +115,20 @@ export function Tree() {
             ...full,
             "questions": optionsThemes,
         } : full;
-        console.log(body)
+
         dispatch(getNewTasks(body));
     }
 
     //обрабатываем изменения в полях ввода
     const handleChangeTask = (ev) => {
         const value = ev.target.value;
-            setNumTask(value);
+        setNumTask(value);
     }
-
     const handleChangeThemes = (ev) => {
         const value = ev.target.value;
         setNumThemes(value);
     }
-
+    //обрабатываем выборы в select
     const handleSelect = (ev) => {
         const selectValue = ev.target.value;
         if (ev.target.name === 'exams') {
@@ -141,7 +141,7 @@ export function Tree() {
     return (
         <section className='catalog'>
             <div className='container catalog__container'>
-                <h2 className='catalog__title'>Каталог заданий</h2>
+                <h1 className='catalog__title'>Каталог заданий</h1>
                 <div className='catalog__selects'>
                     <Select
                         name={'exams'}

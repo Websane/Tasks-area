@@ -1,4 +1,8 @@
-import {TASKS_REQUEST, TASKS_REQUEST_ERROR, TASKS_REQUEST_SUCCESS} from "../actions/tasksActions";
+import {
+    TASKS_REQUEST,
+    TASKS_REQUEST_ERROR,
+    TASKS_REQUEST_SUCCESS
+} from "../actions/tasksActions";
 
 const initialState = {
     status: 'init', //'success' 'loading' 'error'
