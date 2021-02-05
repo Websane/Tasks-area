@@ -97,6 +97,7 @@ button:focus-visible {
 
 .select__list {
     padding: 5px;
+    transition: box-shadow .15s linear;
 }
 
 .options {
@@ -133,6 +134,7 @@ button:focus-visible {
     padding: 7px;
     background-color: #448ad4;
     color: white;
+    transition: box-shadow .15s linear;
 }
 
 .tasks {
